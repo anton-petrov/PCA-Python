@@ -26,7 +26,6 @@ for i in range(1, 4):
     lenna_restored = pca.inverse_transform(lenna_pca)
     plt.subplot(gs[i])
     io.imshow(lenna_restored)
-    print(i)
     xlabel('Restored image n_components = %s' % n_comp)
     print('Variance retained %s %%' % (
                 (1 - sum(pca.explained_variance_ratio_) / size(pca.explained_variance_ratio_)) * 100))
